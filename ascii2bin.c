@@ -28,7 +28,7 @@ int main (int argc, char * argv[], char ** envp) {
 	    // This is where i do all my binary -> dec convertions
 
         digit = ascii_value - offset;
-        fprintf(stdout, "Digit = %d : ascii value = %d \n", digit, ascii_value); 
+        fprintf(stdout, "Digit = %d : ascii value = %u \n", digit, ascii_value); 
         //tells me what the hell this thing does, and what ascii value is
 
         number = (number << 1) + digit;  
