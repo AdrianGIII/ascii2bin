@@ -9,23 +9,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <math.h> 
-
+#include <math.h>
 #define byte unsigned char
+int main (int argc, char *argv[], char ** envp) 
+{
+    int offset = 0x30;
+    unsigned int number = 0;
+    int retval = 0;
+    int digit = 0;
+    byte ascii_value = 0;
+    
+    retval = read(STDIN_FILENO, &ascii_value, 1);
 
-int main (int argc, char * argv[], char ** envp) {
     //int offset = 0;
-    int number = 0;
-    byte asciival = 0;
+    //int number = 0;
+    //byte asciival = 0;
     //int digit = 0;
     int total = 0;
     int valueOfBit = 0;
     int count = 1;
     int total2 = 0;
-    int retval = 0;
-    
-    retval = read(STDIN_FILENO, &asciival, 1);
-    fprintf(stdout, "ascii value = %d \n", asciival); 
+    //int retval = 0;
 	
     while (retval == 1){
 	//asciival = 10001010;
