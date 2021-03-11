@@ -26,5 +26,3 @@ clean:
 	rm -f ints2bytes *.bytes
 	rm -f ascii2bin ascii2bin.o ascii2bin.i ascii2bin.s 
 	rm -f *~ \#*
-
-
