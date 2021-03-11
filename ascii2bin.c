@@ -11,7 +11,7 @@
 #include <unistd.h>
 #include <math.h> 
 
-#define byte unsigned char
+//#define byte unsigned char
 
 int main (int argc, char * argv[], char ** envp) {
     int offset = 0;
@@ -49,23 +49,23 @@ int main (int argc, char * argv[], char ** envp) {
             }
             else {
                 fprintf(stderr, "Error Detected! NOT A BINARY NUM\n");
-                //return 1;
+                return 1;
             }
         }
 
         //assumes 1 bit read 
         //(place before while) 
 
-        if (ascii_value == 0 || ascii_value == 1){
-            total2 += ascii_value * (int) (pow(2, count)+.5);
-        } else {
-            fprintf(stderr, "Error Detected! NOT A BINARY NUM (or not single bit intake)\n");
-            //return 1;
-        }
-        count ++;
-        if (count < 9) {
-            count = 1;
-        }
+        //if (ascii_value == 0 || ascii_value == 1){
+        //    total2 += ascii_value * (int) (pow(2, count)+.5);
+        //} else {
+        //    fprintf(stderr, "Error Detected! NOT A BINARY NUM (or not single bit intake)\n");
+        //    //return 1;
+        //}
+        //count ++;
+        //if (count < 9) {
+        //    count = 1;
+        //}
 
         
 
