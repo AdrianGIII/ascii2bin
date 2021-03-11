@@ -20,7 +20,7 @@ int main (int argc, char *argv[], char ** envp)
     int digit = 0;
     byte ascii_value = 0;
     
-    retval = read(STDIN_FILENO, &ascii_value, 1);
+    retval = read(STDIN_FILENO, &ascii_value, 8);
 
     //int offset = 0;
     //int number = 0;
