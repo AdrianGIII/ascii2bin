@@ -22,8 +22,9 @@ int main (int argc, char * argv[], char ** envp) {
     int valueOfBit = 0;
     int count = 1;
     int total2 = 0;
+    int retval = 0;
     
-    int retval = read(STDIN_FILENO, &asciival, 1);
+    retval = read(STDIN_FILENO, &asciival, 1);
     fprintf(stdout, "ascii value = %d \n", asciival); 
 	
     while (retval == 1){
