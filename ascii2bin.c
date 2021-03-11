@@ -19,7 +19,7 @@ int main (int argc, char * argv[], char ** envp) {
     int count = 1
     int total2 = 0;
     
-    int retval = read(0, &ascii_value, 1);
+    int retval = read(STDIN_FILENO, &ascii_value, 1);
 
     while (retval == 1){
 
