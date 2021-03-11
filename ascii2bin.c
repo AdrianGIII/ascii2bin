@@ -40,6 +40,7 @@ int main (int argc, char * argv[], char ** envp) {
 
         for (int i = 0; i < 8; i++) { // assummes 8 bits in one read. 
             valueOfBit = (ascii_value / (int) (pow(10, i)+.5)) - 10 * (ascii_value / (int) (pow(10, i + 1)+.5) );
+		fprintf(stdout, "valueOfBit = %d ", valueOfBit); 
             if (valueOfBit == 0 || valueOfBit == 1) {
                 total += ascii_value * (int) (pow(2, i)+.5); // probaby makes dec value, look over this again
             }
