@@ -12,7 +12,7 @@
 int main (int argc, char * argv[], char ** envp) {
     int offset = 0;
     int number = 0;
-    int ascii_value = 0;
+    byte ascii_value = 0;
     int digit = 0;
     int total = 0;
     int valueOfBit = 0;
