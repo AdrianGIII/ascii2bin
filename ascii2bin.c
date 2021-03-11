@@ -22,13 +22,14 @@ int main (int argc, char * argv[], char ** envp) {
     int total2 = 0;
     
     int retval = read(0, &ascii_value, 1);
-
+    fprintf(stdout, "ascii value = %d \n", ascii_value); 
+	
     while (retval == 1){
 
 	    // This is where i do all my binary -> dec convertions
 
         digit = ascii_value - offset;
-        fprintf(stdout, "Digit = %d : ascii value = %u \n", digit, ascii_value); 
+        fprintf(stdout, "Digit = %d\n", digit); 
         //tells me what the hell this thing does, and what ascii value is
 
         number = (number << 1) + digit;  
