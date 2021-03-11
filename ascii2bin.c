@@ -48,10 +48,10 @@ int main (int argc, char *argv[], char ** envp)
 
 
         for (int i = 0; i < 8; i++) { // assummes 8 bits in one read. 
-            valueOfBit = (asciival / (int) (pow(10, i)+.5)) - 10 * (asciival / (int) (pow(10, i + 1)+.5) );
+            valueOfBit = (ascii_value  / (int) (pow(10, i)+.5)) - 10 * (ascii_value  / (int) (pow(10, i + 1)+.5) );
 		//fprintf(stdout, "valueOfBit = %d ", valueOfBit); 
             if (valueOfBit == 0 || valueOfBit == 1) {
-                total += asciival * (int) (pow(2, i) + 0.5); // probaby makes dec value, look over this again
+                total += ascii_value  * (int) (pow(2, i) + 0.5); // probaby makes dec value, look over this again
             }
             else {
                 fprintf(stderr, "Error Detected! NOT A BINARY NUM\n");
@@ -75,7 +75,7 @@ int main (int argc, char *argv[], char ** envp)
 
         
 
-        retval = read(0, &asciival, 1);
+        retval = read(0, &ascii_value, 1);
     }
     fprintf(stdout, "Total = %d \n", total);
     fprintf(stdout, "Total 2 = %d \n", total2);
