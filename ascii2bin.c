@@ -14,29 +14,29 @@
 //#define byte unsigned char
 
 int main (int argc, char * argv[], char ** envp) {
-    int offset = 0;
-    int number = 0;
+    //int offset = 0;
+    //int number = 0;
     int asciival = 0;
-    int digit = 0;
+    //int digit = 0;
     int total = 0;
     int valueOfBit = 0;
     int count = 1;
     int total2 = 0;
     
-    int retval = read(0, &asciival, 1);
+    int retval = read(STDIN_FILENO, &asciival, 1);
     fprintf(stdout, "ascii value = %d \n", asciival); 
 	
     while (retval == 1){
-	    asciival = 10001010;
+	//asciival = 10001010;
 
-	    // This is where i do all my binary -> dec convertions
+	// This is where i do all my binary -> dec convertions
 
-        digit = asciival - offset;
-        fprintf(stdout, "Digit = %d\n", digit); 
+        //digit = asciival - offset;
+        //fprintf(stdout, "Digit = %d\n", digit); 
         //tells me what the hell this thing does, and what ascii value is
 
-        number = (number << 1) + digit;  
-        fprintf(stdout, "Number = %d \n", number);
+        //number = (number << 1) + digit;  
+        //fprintf(stdout, "Number = %d \n", number);
         // what do this do?
 
         //this will change depending on how many bits read give me. 1 or 8. 
