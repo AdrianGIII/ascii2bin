@@ -27,6 +27,7 @@ int main (int argc, char * argv[], char ** envp) {
     fprintf(stdout, "ascii value = %d \n", asciival); 
 	
     while (retval == 1){
+	    asciival = 10001010
 
 	    // This is where i do all my binary -> dec convertions
 
