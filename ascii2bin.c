@@ -11,9 +11,10 @@
 #include <unistd.h>
 #include <math.h>
 #define byte unsigned char
+
 int main (int argc, char *argv[], char ** envp) 
 {
-    int offset = 0x30;
+    int offset = 0;
     unsigned int number = 0;
     int retval = 0;
     int digit = 0;
