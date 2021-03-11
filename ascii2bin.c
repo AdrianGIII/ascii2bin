@@ -21,7 +21,7 @@ int main (int argc, char *argv[], char ** envp)
     byte ascii_value = 0;
     
     retval = read(STDIN_FILENO, &ascii_value, 8);
-
+    fprintf(stdout, "ascii = %d \n", ascii_value);
     //int offset = 0;
     //int number = 0;
     //byte asciival = 0;
