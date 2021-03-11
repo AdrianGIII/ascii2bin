@@ -11,12 +11,12 @@
 #include <unistd.h>
 #include <math.h> 
 
-//#define byte unsigned char
+#define byte unsigned char
 
 int main (int argc, char * argv[], char ** envp) {
     //int offset = 0;
     int number = 0;
-    int asciival = 0;
+    byte asciival = 0;
     //int digit = 0;
     int total = 0;
     int valueOfBit = 0;
@@ -44,9 +44,9 @@ int main (int argc, char * argv[], char ** envp) {
 
         for (int i = 0; i < 8; i++) { // assummes 8 bits in one read. 
             valueOfBit = (asciival / (int) (pow(10, i)+.5)) - 10 * (asciival / (int) (pow(10, i + 1)+.5) );
-		fprintf(stdout, "valueOfBit = %d ", valueOfBit); 
+		//fprintf(stdout, "valueOfBit = %d ", valueOfBit); 
             if (valueOfBit == 0 || valueOfBit == 1) {
-                total += asciival * (int) (pow(2, i)+.5); // probaby makes dec value, look over this again
+                total += asciival * (int) (pow(2, i) + 0.5); // probaby makes dec value, look over this again
             }
             else {
                 fprintf(stderr, "Error Detected! NOT A BINARY NUM\n");
