@@ -4,8 +4,8 @@
 /* Date: 2-12-21                */
 /********************************/
 
-#include "stdio.h"
-#include "stdlib.h"
+#include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <math.h> 
 
