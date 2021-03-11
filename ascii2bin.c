@@ -3,6 +3,8 @@
 /* Author: Adrian Gonzalez III  */
 /* Date: 2-12-21                */
 /********************************/
+//gcc -o ascii2bin ascii2bin.c -lm
+//cat 54356.txt | ascii2bin
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -47,7 +49,7 @@ int main (int argc, char * argv[], char ** envp) {
             }
             else {
                 fprintf(stderr, "Error Detected! NOT A BINARY NUM\n");
-                return 1;
+                //return 1;
             }
         }
 
