@@ -33,9 +33,9 @@ int main (int argc, char *argv[], char ** envp)
 	ascii_value -= offset;
 	count ++;
 	
-	fprintf(stdout, "ascii = %d  ", ascii_value);
-	fprintf(stdout, "exponent = %d  ", exp);
-	fprintf(stdout, "count = %d  ", count);
+	//fprintf(stdout, "ascii = %d  ", ascii_value);
+	//fprintf(stdout, "exponent = %d  ", exp);
+	//fprintf(stdout, "count = %d  ", count);
 	   
 	    
 	
@@ -62,7 +62,7 @@ int main (int argc, char *argv[], char ** envp)
 	    
         }
 	
-     	fprintf(stdout, "Total 2 = %d \n", total2);
+     	//fprintf(stdout, "Total 2 = %d \n", total2);
 	    
 	if (ascii_value != -38){
 	    retval = read(0, &ascii_value, 1);
@@ -74,7 +74,7 @@ int main (int argc, char *argv[], char ** envp)
     }
 	
 	
-    fprintf(stdout, "Successfully ended loop \n");
+    //fprintf(stdout, "Successfully ended loop \n");
     
     
     return 0;
