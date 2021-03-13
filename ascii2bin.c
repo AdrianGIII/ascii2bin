@@ -20,7 +20,7 @@ int main (int argc, char *argv[], char ** envp)
     int digit = 0;
     int ascii_value = 0;
     
-    retval = read(STDIN_FILENO, &ascii_value, 8);
+    retval = read(STDIN_FILENO, &ascii_value, 1);
     fprintf(stdout, "ascii = %d \n", ascii_value);
     int total = 0;
     int valueOfBit = 0;
