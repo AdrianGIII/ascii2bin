@@ -29,7 +29,7 @@ int main (int argc, char *argv[], char ** envp)
     int total2 = 0;
 	
     while (retval == 1){
-	ascii_value -= offset
+	ascii_value -= offset;
 	//asciival = 10001010;
 
 	// This is where i do all my binary -> dec convertions
