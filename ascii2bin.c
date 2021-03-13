@@ -37,7 +37,7 @@ int main (int argc, char *argv[], char ** envp)
 	    expHelp = 2 * exp;
 	    exp = expHelp;
         } else {
-            fprintf(stderr, "Error Detected! NOT A BINARY NUM (or not single bit intake)\n");
+            fprintf(stderr, "Error Detected! NOT A BINARY NUM \n");
             return 1;
         }
 	    
@@ -46,7 +46,7 @@ int main (int argc, char *argv[], char ** envp)
         count ++;
 	fprintf(stdout, "count = %d  ", count);
 	    
-        if (count > 9) {
+        if (count > 7) {
             count = 1;
 	    exp = 1;
 	    // replace with get ascii value  here
