@@ -49,7 +49,7 @@ int main (int argc, char *argv[], char ** envp)
 	
         
     }
-    
+     printf("\nThe number is : %u \n", number);
     
     return 0;
 }
