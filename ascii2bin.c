@@ -21,7 +21,7 @@ int main (int argc, char *argv[], char ** envp)
     int ascii_value = 0;
     
     retval = read(STDIN_FILENO, &ascii_value, 1);
-    fprintf(stdout, "ascii = %d \n", ascii_value);
+    
     int total = 0;
     int valueOfBit = 0;
     int count = 1;
@@ -30,6 +30,7 @@ int main (int argc, char *argv[], char ** envp)
 	
     while (retval == 1){
 	ascii_value -= offset;
+	fprintf(stdout, "ascii = %d \n", ascii_value);
 	//asciival = 10001010;
 
 	// This is where i do all my binary -> dec convertions
@@ -62,12 +63,14 @@ int main (int argc, char *argv[], char ** envp)
 
         if (ascii_value == 0 || ascii_value == 1){
             total2 += ascii_value * exp;
-	    exp *= 2;
+	    exp = exp * 2;
         } else {
             fprintf(stderr, "Error Detected! NOT A BINARY NUM (or not single bit intake)\n");
             return 1;
         }
+	    
         count ++;
+	    
         if (count < 9) {
             count = 1;
 	    exp = 1;
