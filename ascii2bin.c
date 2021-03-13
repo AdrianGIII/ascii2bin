@@ -30,7 +30,7 @@ int main (int argc, char *argv[], char ** envp)
 	
     while (retval == 1){
 	ascii_value -= offset;
-	fprintf(stdout, "ascii = %d \n", ascii_value);
+	fprintf(stdout, "ascii = %d  ", ascii_value);
 	//asciival = 10001010;
 
 	// This is where i do all my binary -> dec convertions
@@ -64,12 +64,14 @@ int main (int argc, char *argv[], char ** envp)
         if (ascii_value == 0 || ascii_value == 1){
             total2 += ascii_value * exp;
 	    exp = exp * 2;
+		fprintf(stdout, "exponent = %d  ", exp);
         } else {
             fprintf(stderr, "Error Detected! NOT A BINARY NUM (or not single bit intake)\n");
             return 1;
         }
 	    
         count ++;
+	    fprintf(stdout, "count = %d  ", count);
 	    
         if (count < 9) {
             count = 1;
