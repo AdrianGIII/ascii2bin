@@ -69,7 +69,7 @@ int main (int argc, char *argv[], char ** envp)
         count ++;
         if (count < 9) {
             count = 1;
-	    exp = 1
+	    exp = 1;
 	    // replace with get ascii value  here
 	    fprintf(stdout, "Total 2 = %d \n", total2);
         }
@@ -78,7 +78,7 @@ int main (int argc, char *argv[], char ** envp)
 
         retval = read(0, &ascii_value, 1);
     }
-    fprintf(stdout, "Total 2 = %d \n", total2);;
+    fprintf(stdout, "Total 2 = %d \n", total2);
     
     
     return 0;
