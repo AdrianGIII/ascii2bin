@@ -36,12 +36,17 @@ int main (int argc, char *argv[], char ** envp)
 	fprintf(stdout, "ascii = %d  ", ascii_value);
 	fprintf(stdout, "exponent = %d  ", exp);
 	fprintf(stdout, "count = %d  ", count);
+	   
+	    
 	
         if (ascii_value == 0 || ascii_value == 1){
             total2 += ascii_value * exp;
 	    expHelp = 2 * exp;
 	    exp = expHelp;
         } else {
+	    if (ascii_value == 44){
+		    fprintf(stdout, " new line experiment succsess  ");
+	    }
             fprintf(stderr, "Error Detected! NOT A BINARY NUM \n");
             return 1;
         }
