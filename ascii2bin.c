@@ -45,7 +45,7 @@ int main (int argc, char *argv[], char ** envp)
         count ++;
 	    fprintf(stdout, "count = %d  ", count);
 	    
-        if (count < 9) {
+        if (count > 9) {
             count = 1;
 	    exp = 1;
 	    // replace with get ascii value  here
