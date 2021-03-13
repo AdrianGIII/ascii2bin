@@ -61,10 +61,13 @@ int main (int argc, char *argv[], char ** envp)
         }
 	
      	fprintf(stdout, "Total 2 = %d \n", total2);
+	    
 	if (ascii_value != -38){
 	    retval = read(0, &ascii_value, 1);
+	} else {
+	    retval = 0;
 	}
-	retval = 0;
+	
         
     }
 	
