@@ -36,23 +36,24 @@ int main (int argc, char *argv[], char ** envp)
             total2 += ascii_value * exp;
 	    expHelp = 2 * exp;
 	    exp = expHelp;
-	    fprintf(stdout, "exponent = %d  ", exp);
         } else {
             fprintf(stderr, "Error Detected! NOT A BINARY NUM (or not single bit intake)\n");
             return 1;
         }
 	    
+	fprintf(stdout, "exponent = %d  ", exp);
+	    
         count ++;
-	    fprintf(stdout, "count = %d  ", count);
+	fprintf(stdout, "count = %d  ", count);
 	    
         if (count > 9) {
             count = 1;
 	    exp = 1;
 	    // replace with get ascii value  here
-	    fprintf(stdout, "Total 2 = %d \n", total2);
+	    
         }
 	
-       
+       fprintf(stdout, "Total 2 = %d \n", total2);
 
         retval = read(0, &ascii_value, 1);
     }
