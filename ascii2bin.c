@@ -44,7 +44,7 @@ int main (int argc, char *argv[], char ** envp)
 	    expHelp = 2 * exp;
 	    exp = expHelp;
         } else {
-	    if (ascii_value == 44){
+	    if (ascii_value == -1){
 		    fprintf(stdout, " new line experiment succsess  ");
 	    }
             fprintf(stderr, "Error Detected! NOT A BINARY NUM \n");
