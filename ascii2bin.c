@@ -69,7 +69,7 @@ int main (int argc, char *argv[], char ** envp)
     }
 	
 	
-    fprintf(stdout, "Successfully ended loop \n", total2);
+    fprintf(stdout, "Successfully ended loop \n");
     
     
     return 0;
