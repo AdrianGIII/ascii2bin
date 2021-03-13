@@ -64,7 +64,7 @@ int main (int argc, char *argv[], char ** envp)
 	if (ascii_value != -38){
 	    retval = read(0, &ascii_value, 1);
 	}
-	reval = 0
+	retval = 0;
         
     }
 	
