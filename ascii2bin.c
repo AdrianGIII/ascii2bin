@@ -1,10 +1,9 @@
 /********************************/
-/* Program Name: Checksum Ver. C*/
+/* Program Name: Bin2Ascii      */
 /* Author: Adrian Gonzalez III  */
 /* Date: 2-12-21                */
 /********************************/
-//gcc -o ascii2bin ascii2bin.c -lm
-//cat 54356.txt | ascii2bin
+
 
 #include <stdio.h>
 #include <stdlib.h>
