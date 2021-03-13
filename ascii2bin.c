@@ -26,7 +26,7 @@ int main (int argc, char *argv[], char ** envp)
 	ascii_value -= offset;    
 	
         if (ascii_value == 0 || ascii_value == 1){
-            digit = ascii_value - offset;
+            digit = ascii_value;
             number = (number << 1) + digit;  
         } else if (ascii_value == -38){
 		
