@@ -56,7 +56,7 @@ int main (int argc, char *argv[], char ** envp)
         if (count > 7) {
             count = 0;
 	    exp = 1;
-	    printf ("\n The final number is : %u , witch translates to : \"%c\t\" In Ascii \n", total2, total2);
+	    printf ("\n The final number is : %u , witch translates to : \"%c\" In Ascii \n", total2, total2);
 	    total2 = 0;
 	    
         }
