@@ -57,6 +57,8 @@ int main (int argc, char *argv[], char ** envp)
             count = 0;
 	    exp = 1;
 	    // replace with get ascii value  here
+		
+	    total2 = 0;
 	    
         }
 	
