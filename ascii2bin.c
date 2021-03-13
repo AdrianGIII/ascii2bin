@@ -53,15 +53,15 @@ int main (int argc, char *argv[], char ** envp)
         
 	
 	    
-        if (count > 7) {
-            count = 0;
-	    exp = 1;
-	    printf ("The number is : %u , witch translates to : \"%c\" In Ascii \n", total2, total2);
-	    total2 = 0;
+        //if (count > 7) {
+        //    count = 0;
+	//    exp = 1;
+	//    printf ("The number is : %u , witch translates to : \"%c\" In Ascii \n", total2, total2);
+	//    total2 = 0;
 	    
-        }
+        //}
 	
-     	//fprintf(stdout, "Total 2 = %d \n", total2);
+     	
 	    
 	if (ascii_value != -38){
 	    retval = read(0, &ascii_value, 1);
@@ -71,7 +71,7 @@ int main (int argc, char *argv[], char ** envp)
 	
         
     }
-	
+    fprintf(stdout, "Total 2 = %d \n", total2);
 	
     //fprintf(stdout, "Successfully ended loop \n");
     
