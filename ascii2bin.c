@@ -29,10 +29,13 @@ int main (int argc, char *argv[], char ** envp)
     int total2 = 0;
 	
     while (retval == 1){
-	ascii_value -= offset;
-	fprintf(stdout, "ascii = %d  ", ascii_value);
 	
-	    
+	ascii_value -= offset;
+	count ++;
+	
+	fprintf(stdout, "ascii = %d  ", ascii_value);
+	fprintf(stdout, "exponent = %d  ", exp);
+	fprintf(stdout, "count = %d  ", count);
 	
         if (ascii_value == 0 || ascii_value == 1){
             total2 += ascii_value * exp;
@@ -42,11 +45,8 @@ int main (int argc, char *argv[], char ** envp)
             fprintf(stderr, "Error Detected! NOT A BINARY NUM \n");
             return 1;
         }
-	    
-	fprintf(stdout, "exponent = %d  ", exp);
-	    
-        count ++;
-	fprintf(stdout, "count = %d  ", count);
+        
+	
 	    
         if (count > 7) {
             count = 0;
