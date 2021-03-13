@@ -43,10 +43,10 @@ int main (int argc, char *argv[], char ** envp)
             total2 += ascii_value * exp;
 	    expHelp = 2 * exp;
 	    exp = expHelp;
-        } else {
-	    if (ascii_value == -38){
-		    fprintf(stdout, " new line experiment succsess  ");
-	    }
+        } else if (ascii_value == -38){
+		
+	} else {
+	    
             fprintf(stderr, "Error Detected! NOT A BINARY NUM \n");
             return 1;
         }
@@ -60,11 +60,16 @@ int main (int argc, char *argv[], char ** envp)
 	    
         }
 	
-       fprintf(stdout, "Total 2 = %d \n", total2);
-
-        retval = read(0, &ascii_value, 1);
+     	fprintf(stdout, "Total 2 = %d \n", total2);
+	if (ascii_value != -38){
+	    retval = read(0, &ascii_value, 1);
+	}
+	reval = 0
+        
     }
-    fprintf(stdout, "Total 2 = %d \n", total2);
+	
+	
+    fprintf(stdout, "Successfully ended loop \n", total2);
     
     
     return 0;
