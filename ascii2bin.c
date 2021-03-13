@@ -15,22 +15,18 @@
 int main (int argc, char *argv[], char ** envp) 
 {
     int offset = 0;
-    unsigned int number = 0;
+    int number = 0;
     int retval = 0;
     int digit = 0;
-    byte ascii_value = 0;
+    int ascii_value = 0;
     
     retval = read(STDIN_FILENO, &ascii_value, 8);
     fprintf(stdout, "ascii = %d \n", ascii_value);
-    //int offset = 0;
-    //int number = 0;
-    //byte asciival = 0;
-    //int digit = 0;
     int total = 0;
     int valueOfBit = 0;
     int count = 1;
+    int exp = 1;
     int total2 = 0;
-    //int retval = 0;
 	
     while (retval == 1){
 	//asciival = 10001010;
@@ -48,41 +44,42 @@ int main (int argc, char *argv[], char ** envp)
         //this will change depending on how many bits read give me. 1 or 8. 
 
 
-        for (int i = 0; i < 8; i++) { // assummes 8 bits in one read. 
-            valueOfBit = (ascii_value  / (int) (pow(10, i)+.5)) - 10 * (ascii_value  / (int) (pow(10, i + 1)+.5) );
-		//fprintf(stdout, "valueOfBit = %d ", valueOfBit); 
-            if (valueOfBit == 0 || valueOfBit == 1) {
-                total += ascii_value  * (int) (pow(2, i) + 0.5); // probaby makes dec value, look over this again
-            }
-            else {
-                fprintf(stderr, "Error Detected! NOT A BINARY NUM\n");
-                return 1;
-            }
-        }
+        //for (int i = 0; i < 8; i++) { // assummes 8 bits in one read. 
+        //    valueOfBit = (ascii_value  / (int) (pow(10, i)+.5)) - 10 * (ascii_value  / (int) (pow(10, i + 1)+.5) );
+	//	//fprintf(stdout, "valueOfBit = %d ", valueOfBit); 
+        //    if (valueOfBit == 0 || valueOfBit == 1) {
+        //        total += ascii_value  * (int) (pow(2, i) + 0.5); // probaby makes dec value, look over this again
+        //    }
+        //    else {
+        //        fprintf(stderr, "Error Detected! NOT A BINARY NUM\n");
+        //        return 1;
+        //    }
+        //}
 
         //assumes 1 bit read 
         //(place before while) 
 
-        //if (ascii_value == 0 || ascii_value == 1){
-        //    total2 += ascii_value * (int) (pow(2, count)+.5);
-        //} else {
-        //    fprintf(stderr, "Error Detected! NOT A BINARY NUM (or not single bit intake)\n");
-        //    //return 1;
-        //}
-        //count ++;
-        //if (count < 9) {
-        //    count = 1;
-        //}
-
-        
+        if (ascii_value == 0 || ascii_value == 1){
+            total2 += ascii_value * exp;
+	    exp *= 2;
+        } else {
+            fprintf(stderr, "Error Detected! NOT A BINARY NUM (or not single bit intake)\n");
+            return 1;
+        }
+        count ++;
+        if (count < 9) {
+            count = 1;
+	    exp = 1
+	    // replace with get ascii value  here
+	    fprintf(stdout, "Total 2 = %d \n", total2);
+        }
+	
+       
 
         retval = read(0, &ascii_value, 1);
     }
-    fprintf(stdout, "Total = %d \n", total);
-    fprintf(stdout, "Total 2 = %d \n", total2);
-
-    number = 64;
-    // this is where i convert Decimal to ascii
-    printf("%u\n", number);
+    fprintf(stdout, "Total 2 = %d \n", total2);;
+    
+    
     return 0;
 }
