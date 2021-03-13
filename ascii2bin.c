@@ -24,13 +24,15 @@ int main (int argc, char *argv[], char ** envp)
     
     int total = 0;
     int expHelp = 0;
-    int count = 1;
+    int count = 0;
     int exp = 1;
     int total2 = 0;
 	
     while (retval == 1){
 	ascii_value -= offset;
 	fprintf(stdout, "ascii = %d  ", ascii_value);
+	
+	    
 	
         if (ascii_value == 0 || ascii_value == 1){
             total2 += ascii_value * exp;
@@ -47,7 +49,7 @@ int main (int argc, char *argv[], char ** envp)
 	fprintf(stdout, "count = %d  ", count);
 	    
         if (count > 7) {
-            count = 1;
+            count = 0;
 	    exp = 1;
 	    // replace with get ascii value  here
 	    
